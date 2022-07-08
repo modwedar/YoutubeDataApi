@@ -2,7 +2,7 @@
 
 [![pub package](https://img.shields.io/pub/v/youtube_data_api.svg)](https://img.shields.io/pub/v/youtube_data_api.svg)
 
-A Flutter plugin for fetching complete data from YouTube to fetch data. Supports iOS and Android.
+A Flutter package for fetching complete data from YouTube. Supports Search, Trending, Channels, Playlists and Video data.
 
 ## Features
 
