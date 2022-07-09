@@ -43,7 +43,7 @@ class Video {
         duration: map?['compactVideoRenderer']
         ?['lengthText']?['simpleText'],
         thumbnail: map?['compactVideoRenderer']
-        ['thumbnail']['thumbnails'][0]
+        ['thumbnail']['thumbnails'][1]
         ['url'],
         channelName: map?['compactVideoRenderer']
         ?['shortBylineText']?['runs']

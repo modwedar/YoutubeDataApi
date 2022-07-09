@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 class VideoPage {
   String? videoId,
       title,
@@ -23,6 +25,7 @@ class VideoPage {
         this.channelId});
 
   factory VideoPage.fromMap(Map<String, dynamic>? map,String videoId) {
+    log(map.toString());
     return VideoPage(
         videoId: videoId,
         title: map?['results']['results']['contents'][0]['videoPrimaryInfoRenderer']['title']['runs'][0]['text'],

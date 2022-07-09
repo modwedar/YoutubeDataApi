@@ -425,8 +425,10 @@ class YoutubeDataApi {
       List<Video> videosList = [];
 
       contentList?.forEach((element) {
-        Video video = Video.fromMap(element);
-        videosList.add(video);
+        if(element['compactVideoRenderer']?['title']?['simpleText'] !=null){
+          Video video = Video.fromMap(element);
+          videosList.add(video);
+        }
       });
 
       videoData = VideoData(
@@ -435,6 +437,7 @@ class YoutubeDataApi {
     return videoData;
   }
 
+  ///Load more videos in youtube channel
   Future<List<Video>> loadMoreInChannel(String API_KEY) async {
     List<Video> videos = [];
     var client = http.Client();
@@ -468,6 +471,7 @@ class YoutubeDataApi {
     return videos;
   }
 
+  ///Load more videos in youtube playlist
   Future<List<Video>> loadMoreInPlayList(String API_KEY) async {
     List<Video> list = [];
     var client = http.Client();

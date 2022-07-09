@@ -29,8 +29,6 @@ To use this plugin, add `youtube_data_api` as a [dependency in your pubspec.yaml
 [<img src="https://raw.githubusercontent.com/modwedar/FlutterTube/master/dev/phoneScreenshots/5.jpg" width=280>](https://raw.githubusercontent.com/modwedar/FlutterTube/master/dev/phoneScreenshots/5.jpg)
 [<img src="https://raw.githubusercontent.com/modwedar/FlutterTube/master/dev/phoneScreenshots/6.jpg" width=280>](https://raw.githubusercontent.com/modwedar/FlutterTube/master/dev/phoneScreenshots/6.jpg)
 [<img src="https://raw.githubusercontent.com/modwedar/FlutterTube/master/dev/phoneScreenshots/7.jpg" width=280>](https://raw.githubusercontent.com/modwedar/FlutterTube/master/dev/phoneScreenshots/7.jpg)
-[<img src="https://raw.githubusercontent.com/modwedar/FlutterTube/master/dev/phoneScreenshots/8.jpg" width=280>](https://raw.githubusercontent.com/modwedar/FlutterTube/master/dev/phoneScreenshots/8.jpg)
-[<img src="https://raw.githubusercontent.com/modwedar/FlutterTube/master/dev/phoneScreenshots/9.jpg" width=280>](https://raw.githubusercontent.com/modwedar/FlutterTube/master/dev/phoneScreenshots/9.jpg)
 [<img src="https://raw.githubusercontent.com/modwedar/FlutterTube/master/dev/phoneScreenshots/10.jpg" width=280>](https://raw.githubusercontent.com/modwedar/FlutterTube/master/dev/phoneScreenshots/10.jpg)
 
 To search for videos or channels or playlists
@@ -57,7 +55,9 @@ List<Video> videos = await youtubeDataApi.fetchTrendingVideo();
 
 To get gaming, music, movies videos on trend
 ```dart
-List<Video> videos = await youtubeDataApi.fetchTrendingMusic();
+List<Video> trendingMusicVideos = await youtubeDataApi.fetchTrendingMusic();
+List<Video> trendingGamingVideos = await youtubeDataApi.fetchTrendingGaming();
+List<Video> trendingMoviesVideos = await youtubeDataApi.fetchTrendingMovies();
 ```
 
 To get suggestion search queries
