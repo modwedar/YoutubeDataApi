@@ -297,7 +297,7 @@ class _VideoDetailPageState extends State<VideoDetailPage> {
                                             builder: (context) => ChannelPage(
                                                 id: videoData!.video!.channelId,
                                                 title:
-                                                    videoData!.video!.username)),
+                                                    videoData!.video!.channelName)),
                                       );
                                     },
                                     child: Row(
@@ -326,7 +326,7 @@ class _VideoDetailPageState extends State<VideoDetailPage> {
                                                 CrossAxisAlignment.start,
                                             children: <Widget>[
                                               Text(
-                                                videoData?.video?.username??"",
+                                                videoData?.video?.channelName??"",
                                                 style: TextStyle(
                                                     color: white,
                                                     fontFamily: 'Cairo',

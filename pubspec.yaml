@@ -1,6 +1,6 @@
 name: youtube_data_api
 description: A Flutter package for fetching complete data from YouTube. Supports Search, Trending, Channels, Playlists and Video data.
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/modwedar/YoutubeDataApi
 repository: https://github.com/modwedar/YoutubeDataApi
 

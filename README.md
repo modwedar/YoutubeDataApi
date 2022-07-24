@@ -2,12 +2,12 @@
 
 [![pub package](https://img.shields.io/pub/v/youtube_data_api.svg)](https://img.shields.io/pub/v/youtube_data_api.svg)
 
-A Flutter package for fetching complete data from YouTube. Supports Search, Trending, Channels, Playlists and Video data.
+A Flutter package for fetching complete data from YouTube. Supports Search, Trending, Channels, Playlists and Video Data.
 
 ## Features
 
 - Search Video, Playlist, Channel on YouTube with (Unlimited Videos With Loading More) feature.
-- Get Video Data, Id, Thumbnail, Channel Name, Views, Likes
+- Get Video Data, Id, Thumbnail, Channel Name, Views, Likes, Description
 - Get Related Videos with a video
 - Get Playlist Videos with (Loading More) feature
 - Get Channel complete data (Name, Id, Banner, Avatar, Videos Count, Subscribers Count, Videos with (Loading More) feature)
