@@ -77,11 +77,7 @@ class _PlayListPageState extends State<PlayListPage> {
 
   Widget video(Video video) {
     return VideoWidget(
-      videoId: video.videoId!,
-      duration: video.duration!,
-      title: video.title!,
-      channelName: video.channelName!,
-      views: "",
+      video: video,
     );
   }
 

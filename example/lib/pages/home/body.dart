@@ -36,11 +36,7 @@ class _BodyState extends State<Body> {
 
   Widget video(Video video) {
     return VideoWidget(
-      videoId: video.videoId!,
-      duration: video.duration!,
-      title: video.title!,
-      channelName: video.channelName!,
-      views: video.views!,
+     video: video,
     );
   }
 }

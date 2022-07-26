@@ -462,7 +462,7 @@ class _VideoDetailPageState extends State<VideoDetailPage> {
                                                       image: DecorationImage(
                                                           image:
                                                           Image.network(
-                                                              videoData!.videosList[index].thumbnail!)
+                                                              videoData!.videosList[index].thumbnails![1].url!)
                                                               .image,
                                                           fit: BoxFit.cover)),
                                                   child: Stack(

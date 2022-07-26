@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:youtube_data_api/models/thumbnail.dart';
 import '../pages/playlist_page.dart';
 
 class PlayListWidget extends StatelessWidget {
-  final thumbnails;
+  final List<Thumbnail> thumbnails;
   final String id, videoCount, title, channelName;
 
   PlayListWidget({
@@ -38,7 +39,7 @@ class PlayListWidget extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8),
                           image: DecorationImage(
                               image: Image.network(
-                                      thumbnails[thumbnails.length - 1]['url'])
+                                      thumbnails[0].url!)
                                   .image,
                               fit: BoxFit.cover)),
                     ),

@@ -218,12 +218,9 @@ class _BodyState extends State<Body> {
 
   Widget video(Video video) {
     if(video.videoId != null){
+      video.channelName = widget.title;
       return VideoWidget(
-        videoId: video.videoId!,
-        duration: video.duration!,
-        title: video.title!,
-        channelName: widget.title,
-        views: video.views!,
+        video: video,
       );
     }
     return Container();

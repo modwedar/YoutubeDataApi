@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:youtube_data_api/models/video.dart';
 import '/pages/video_detail_page.dart';
 
 
 class VideoWidget extends StatelessWidget {
-  final String videoId, duration, title, channelName, views;
+  final Video video;
 
   VideoWidget({
-    required this.videoId,
-    required this.duration,
-    required this.title,
-    required this.channelName,
-    required this.views,
+    required this.video,
   });
 
 
@@ -39,7 +36,7 @@ class VideoWidget extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8),
                           image: DecorationImage(
                               image: Image.network(
-                                      "https://i.ytimg.com/vi/$videoId/hqdefault.jpg")
+                                      video.thumbnails![0].url!)
                                   .image,
                               fit: BoxFit.cover)),
                     ),
@@ -49,10 +46,10 @@ class VideoWidget extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(
                             top: 1, bottom: 1, left: 4, right: 4),
-                        color: (duration == "Live")
+                        color: (video.duration == "Live")
                             ? Colors.red.withOpacity(0.88)
                             : Colors.black54,
-                        child: Text(duration,
+                        child: Text(video.duration ?? '',
                             style:
                                 const TextStyle(
                                     color: Colors.white,
@@ -72,7 +69,7 @@ class VideoWidget extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      title,
+                      video.title ?? '',
                       textAlign: TextAlign.right,
                       style: const TextStyle(
                           color: Colors.white,
@@ -83,7 +80,7 @@ class VideoWidget extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ), //video title
                     Text(
-                      channelName,
+                      video.channelName ?? '',
                       textAlign: TextAlign.right,
                       style: const TextStyle(
                         color: Colors.white38,
@@ -95,7 +92,7 @@ class VideoWidget extends StatelessWidget {
                       height: 5,
                     ),
                     Text(
-                      views,
+                      video.views ?? '',
                       style: const TextStyle(color: Colors.white38,
                           fontSize: 12,
                           fontFamily: 'Cairo'
@@ -115,6 +112,6 @@ class VideoWidget extends StatelessWidget {
         context,
         MaterialPageRoute(
             builder: (_) => VideoDetailPage(
-                videoId: videoId)));
+                videoId: video.videoId!)));
   }
 }

@@ -84,11 +84,7 @@ class _SearchPageState extends State<SearchPage> {
 
   Widget video(Video video) {
     return VideoWidget(
-      videoId: video.videoId!,
-      duration: video.duration!,
-      title: video.title!,
-      channelName: video.channelName!,
-      views: video.views!,
+      video: video,
     );
   }
 

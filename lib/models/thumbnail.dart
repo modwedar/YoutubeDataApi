@@ -1,4 +1,5 @@
 class Thumbnail {
   String? url;
-  Thumbnail({this.url});
+  int? width, height;
+  Thumbnail({this.url, this.width, this.height});
 }

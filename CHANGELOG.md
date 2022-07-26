@@ -1,3 +1,7 @@
+## [1.0.4]
+
+    - Add multiple thumbnails
+
 ## [1.0.3]
 
     - Add video description
@@ -12,4 +16,4 @@
 
 ## [1.0.0]
 
--- create package
+     - create package

@@ -1,18 +1,27 @@
-import 'dart:developer';
-
 import 'package:youtube_data_api/helpers/description_helper.dart';
 
 class VideoPage {
-  String? videoId,
-      title,
-      date,
-      description,
-      channelName,
-      viewCount,
-      likeCount,
-      unlikeCount,
-      channelThumb,
-      channelId;
+  ///Get video id from video page
+  String? videoId;
+  ///Get video title from video page
+  String? title;
+  ///Get video date from video page
+  String? date;
+  ///Get video description from video page
+  String? description;
+  ///Get video channel name from video page
+  String? channelName;
+  ///Get video views count as string from video page
+  String? viewCount;
+  ///Get video likes count as string from video page
+  String? likeCount;
+  ///Get video unlikes count as string from video page
+  String? unlikeCount;
+  ///Get video channel thumbnail from video page
+  String? channelThumb;
+  ///Get channel id from video page
+  String? channelId;
+  ///Get channel subscribes count as string from video page
   String? subscribeCount;
 
   VideoPage({this.videoId,
@@ -26,6 +35,7 @@ class VideoPage {
     this.description,
     this.channelThumb,
     this.channelId});
+
 
   factory VideoPage.fromMap(Map<String, dynamic>? map, String videoId) {
     return VideoPage(
